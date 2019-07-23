@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style2.css' %}" rel="stylesheet" />
+    <title>User : {{ name}}</title>
+    <style>
+        body
+        {
+        //background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+        background-image:url({% static 'images/bg2.jpg' %});
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        }
+
+        #menu
+        {
+        margin-top:30px;
+        height:50px;
+        width:100%;
+        //background-color:black;
+        //border:1px solid;
+        //border-radius:8px;
+        }
+        #menu ul
+        {
+        list-style-type:none;
+        }
+        #menu ul li
+        {
+        display:inline;
+        padding:15px;
+        //color:white;
+        //border:1px solid;
+        }
+        #menu ul li a
+        {
+        color:#525160;
+        font-family:calibri;
+        letter-spacing:2px;
+        font-size:15px;
+        text-decoration:none;
+        }
+        #menu ul li a:hover
+        {
+        color:#ec1c24;
+        }
+        #a1
+        {
+        height:40px;
+        width:140px;
+        border:1px solid grey;
+        margin-top:55px;
+        border-radius:100px;
+        background-color:;
+        }
+        #a2
+        {
+        height:35px;
+        width:35px;
+        border-radius:50px;
+        border:1px solid;
+        margin-top:2px;
+        margin-left:2px;
+        float:left;
+        background-color:lightgrey;
+        }
+        #a3
+        {
+        height:35px;
+        width:95px;
+        //border:1px solid;
+        float:left;
+        margin-top:2px;
+        }
+        .s6
+        {
+        width:100%;
+        min-height:700px;
+        margin-top:10px;
+        //border:1px solid;
+        }
+        .s7
+        {
+        height:780px;
+        width:25%;
+        float:left;
+        border-radius:10px;
+        background-color:rgba(255,255,255,0.3);
+        border:1px solid transparent;
+        box-shadow:5px 5px 10px;
+        }
+        .notification1
+        {
+        height:40px;
+        width:91.6%;
+        text-align:center;
+        border-radius:10px;
+        margin:10px 12px;
+        background-color:#ec1c24;
+        box-shadow:5px 5px 10px;
+        }
+        .notification2
+        {
+        height:660px;
+        width:100%;
+        //border:1px solid;
+        margin-top:10px;
+        }
+        .notification3
+        {
+        min-height:50px;
+        height:auto;
+        width:87.9%;
+        margin-left:14px;
+        border-radius:5px;
+        word-wrap:break-word;
+        padding:4px;
+        margin-top:15px;
+        text-align:justify;
+        background:#212121;
+        box-shadow:7px 7px 10px;
+        }
+        .s8
+        {
+        height:782px;
+        width:70%;
+        border:1px solid transparent;
+        background:rgba(255,255,255,0.9);
+        border-radius:10px;
+        box-shadow:7px 7px 10px;
+        float:right;
+        }
+        hr
+        {
+        background:black;
+        border:1px solid black;
+        width:90%;
+        }
+
+
+
+        //ANIMATION TEXT STARTS
+
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf9fd;
+    color: #011a32;
+    font: 16px/1.25 'Raleway', sans-serif;
+    //text-align: center;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1em;
+    width: 100%;
+}
+
+h1 {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+h1:hover {
+    animation-play-state: paused;
+}
+
+a {
+    color: #024794;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+
+    20% {
+        transform: translateY(-1em);
+        text-shadow:
+            0 0.125em 0 #0c2ffb,
+            0 0.25em 0 #2cfcfd,
+            0 -0.125em 0 #fb203b,
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {
+        transform: translateY(0.5em);
+        text-shadow:
+            0 -0.0625em 0 #0c2ffb,
+            0 -0.125em 0 #2cfcfd,
+            0 0.0625em 0 #fb203b,
+            0 0.125em 0 #fefc4b;
+    }
+
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow:
+            0 0.03125em 0 #0c2ffb,
+            0 0.0625em 0 #2cfcfd,
+            0 -0.03125em 0 #fb203b,
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+
+        //ANIMATION TEXT ENDS
+
+
+    </style>
+</head>
+<body>
+<div id="b1">
+<div id="outer">
+    <div id="p1">
+        <div class="s1">
+            <a href="{% url 'userzone:userhome' %}"><div class="s3" style="background-image:url('{% static "images/logo.png" %}');background-size:100%;background-repeat:no-repeat;"></div></a>
+            <div class="s4">
+                <h2><span style="color:white;">C</span>all Processing <span style="color:white;">O</span>ptimisation</h2>
+                <h4 style="color:#5b7a9a; margin-left:20px;margin-top:-15px;font-size:15px;letter-spacing:2px;text-shadow:1px 1px 1px;">CUSTOMER SUPPORT</h4>
+            </div>
+            <div class="s5" style="border:1px solid transparent;width:200px;">
+                {% if name %}
+                <h4 style="margin-top:75px;color:#31302c;margin-left:20px;font-family:calibri;letterspacing:1px;">Welcome! {{ name }}</h4>
+                {% endif %}
+
+            </div>
+
+        </div>
+        <hr style="border:0.5px solid black;width:100%;"/>
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'userzone:userhome' %}">HOME</a></li>
+		    <li><a href="{% url 'userzone:discussion' %}">DISCUSS</a></li>
+		    <!--<li><a href="{% url 'userzone:searchsolution' %}">SEARCH SOLUTION</a></li>-->
+		    <li><a href="{% url 'userzone:complainlog' %}">COMPLAIN LOG</a></li>
+		    <li><a href="{% url 'userzone:changepassword' %}">CHANGE PASSWORD</a></li>
+		    <li><a href="{% url 'userzone:logout' %}">LOGOUT</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+    <div class="s6" style="min-height:800px;"><br/>
+        <div class="s7">
+            <div class="notification1"><br/>
+                <a href="{% url 'userzone:discussion' %}" style="text-decoration:none;"><p style="font-size:20px;font-weight:900;color:white;margin-top:-12px;">LIVE ON FORUM</p></a>
+            </div>
+            <hr/>
+            <center>
+                <div class="notification2">
+            <marquee direction="up" height="690" onmouseover="stop()" onmouseout="start()">
+            {% for n in q %}
+                <div class="notification3">
+                    <a href="{% url 'userzone:viewanswer' n.qid %}" style="text-decoration:none;">
+            <span style="text-align:center;">
+                <p style="color:white;font-size:20px;">{{ n.questiontext }}</p>
+                <p style="color:lightgrey;font-size:12px;margin-top:-14px;margin-left:-7px">{{ n.posteddate }}</p>
+            </span></a>
+                    </div>
+            {% endfor %}
+            </marquee>
+                    </div>
+                </center>
+        </div>
+        <div class="s8">
+            <center>
+              <div id="wrapper">
+      <div id="container">
+
+          <h1>WELCOME! {{ name }}</h1>
+        <h2>Welcome to django powered page</h2>
+
+
+      </div>
+  </div>
+                </center>
+        </div>
+    </div>
+    </div>
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %} style="list-style-type:none">
+            <script>
+                var a="{{ message }}";
+                alert(a);
+            </script>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h2 style="font-size:30px;color:white;">About Us</h2>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

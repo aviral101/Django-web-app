@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style2.css' %}" rel="stylesheet" />
+    <title></title>
+    <style>
+        body
+        {
+        //background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+        background-image:url({% static 'images/bg2.jpg' %});
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        }
+
+        #menu
+        {
+        margin-top:30px;
+        height:50px;
+        width:100%;
+        //background-color:black;
+        //border:1px solid;
+        //border-radius:8px;
+        }
+        #menu ul
+        {
+        list-style-type:none;
+        }
+        #menu ul li
+        {
+        display:inline;
+        padding:15px;
+        //color:white;
+        //border:1px solid;
+        }
+        #menu ul li a
+        {
+        color:#525160;
+        font-family:calibri;
+        letter-spacing:2px;
+        font-size:15px;
+        text-decoration:none;
+        }
+        #menu ul li a:hover
+        {
+        color:#ec1c24;
+        }
+        #a1
+        {
+        height:40px;
+        width:140px;
+        border:1px solid grey;
+        margin-top:55px;
+        border-radius:100px;
+        background-color:;
+        }
+        #a2
+        {
+        height:35px;
+        width:35px;
+        border-radius:50px;
+        border:1px solid;
+        margin-top:2px;
+        margin-left:2px;
+        float:left;
+        background-color:lightgrey;
+        }
+        #a3
+        {
+        height:35px;
+        width:95px;
+        //border:1px solid;
+        float:left;
+        margin-top:2px;
+        }
+        table
+        {
+        border-collapse:seperate;
+        border-spacing:0 6px;
+        }
+    </style>
+</head>
+<body>
+<div id="b1">
+<div id="outer">
+    <div id="p1">
+        <div class="s1">
+            <a href="{% url 'userzone:userhome' %}"><div class="s3" style="background-image:url('{% static "images/logo.png" %}');background-size:100%;background-repeat:no-repeat;"></div></a>
+            <div class="s4">
+                <h2><span style="color:white;">C</span>all Processing <span style="color:white;">O</span>ptimisation</h2>
+                <h4 style="color:#5b7a9a; margin-left:20px;margin-top:-15px;font-size:15px;letter-spacing:2px;text-shadow:1px 1px 1px;">CUSTOMER SUPPORT</h4>
+            </div>
+            <div class="s5" style="border:none;">
+                {% if name %}
+                <h4 style="margin-top:75px;color:#31302c;font-family:calibri;letterspacing:1px;">{{ name }}</h4>
+                {% endif %}
+
+            </div>
+
+        </div>
+        <hr style="background-color:black;"/>
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'userzone:userhome' %}">HOME</a></li>
+		    <li><a href="{% url 'userzone:discussion' %}">DISCUSS</a></li>
+		    <!--<li><a href="{% url 'userzone:searchsolution' %}">SEARCH SOLUTION</a></li>-->
+		    <li><a href="{% url 'userzone:complainlog' %}">COMPLAIN LOG</a></li>
+		    <li><a href="{% url 'userzone:changepassword' %}">CHANGE PASSWORD</a></li>
+		    <li><a href="{% url 'userzone:logout' %}">LOGOUT</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+    <div class="s6">
+        <div class="a4">
+        <form action="{% url 'userzone:postanswer' %}" method="post">
+            {% csrf_token %}
+            <table border="0" style="margin:30px 250px;width:70%;">
+                <tr>
+                    <td>
+                        <textarea class="box4" name="answertext" placeholder="Write your reply..." required ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="hidden" name="qid" value="{{ qid }}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" class="button4" value="Post Reply" style="margin-left:538px;"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </div>
+    </div>
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

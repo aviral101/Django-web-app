@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style.css' %}" rel="stylesheet" />
+    <title>Call Processing Optimisation</title>
+    <script>
+        function check()
+        {
+        var a=document.getElementById('password').value;
+        var b=document.getElementById('confirm_password').value;
+
+          if ((a==b)&&(a!='')&&(b!=''))
+            {
+            document.getElementById('err').style.color = "green";
+            document.getElementById('err').innerHTML = "✔";
+            return true;
+            }
+          else if(a!=b)
+            {
+            document.getElementById('err').style.color = "red";
+            document.getElementById('err').innerHTML = "✘";
+            return false;
+            }
+        }
+    </script>
+    <script>
+        document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('outer').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('outer').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+    <style>
+    #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://media.giphy.com/media/xFmuT64Jto3mRO4w3G/giphy.gif") no-repeat center center rgba(0,0,0,0.25)
+}
+    </style>
+</head>
+<body>
+<div id="load"></div>
+<div id="outer">
+    <div id="p1">
+        <div class="s1">
+            <a href="{% url 'index' %}"><div class="s3" style="background-image:url('{% static "images/logo.png" %}');background-size:100%;background-repeat:no-repeat;"></div></a>
+            <div class="s4">
+                <h2><span style="color:white;">C</span>all Processing <span style="color:white;">O</span>ptimisation</h2>
+                <h4 style="color:#5b7a9a; margin-left:20px;margin-top:-15px;font-size:15px;letter-spacing:2px;text-shadow:1px 1px 1px;">CUSTOMER SUPPORT</h4>
+            </div>
+            <div class="s5">
+            <a href="{% url 'login' %}"><input type="button" class="button1" value="Login"/></a>
+            </div>
+            <div class="s5">
+                <a href="{% url 'registration' %}"><input type="button" class="button1" value="Register"/></a>
+            </div>
+        </div>
+        <hr style="background-color:black;"/>
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a href="{% url 'index' %}">HOME</a></li>
+		    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'registration' %}">REGISTRATION</a></li>
+		    <li><a href="{% url 'login' %}">LOGIN</a></li>
+		    <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+    <div class="s6" style="background-color:rgba(255,255,255,0.4);">
+        <br/>
+            <form action="{% url 'custreg' %}" method="post" onsubmit="return check(this);">
+                {% csrf_token %}
+                <h2 style="text-align:Center;font-family:calibri;font-weight:900;">
+                    <u>Customer Registration Form</u>
+                </h2>
+                <table border="0" style="width:60%;margin:0 auto;" cellspacing="14px">
+                    <tr>
+                        <td align="right">Enter Full Name :</td>
+                        <td>
+                            <input class="box1" type="text" name="name" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Select Gender :</td>
+                        <td>
+                            <input type="radio" name="gender" value="Male"/>Male
+                            <input type="radio" name="gender" value="Female"/>Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Address :</td>
+                        <td>
+                        <textarea class="box2" name="address" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Nationality :</td>
+                        <td>
+                            <input type="text" class="box1" name="nationality" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Contact No. :</td>
+                        <td>
+                            <input type="text" class="box1" name="contactno" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Email address (Unique) :</td>
+                        <td>
+                            <input type="email" class="box1" name="emailaddress" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Password :</td>
+                        <td>
+                            <input type="password" id="password" class="box1" name="password" onkeyup="check();" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Confirm Password :</td>
+                        <td>
+                            <input type="password" id="confirm_password" class="box1" name="confirm_password" onkeyup="check();" required/>
+                            <span id="err" style="font-weight:900;margin-left:10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp</td>
+                        <td>
+                        <input type="submit" value="Register" class="button2" onclick="return check();"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %} style="list-style-type:none;">
+                        <script>
+                            var a = "{{ message }}";
+                            alert(a);
+                        </script>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+        </div>
+    </div>
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</body>
+</html>

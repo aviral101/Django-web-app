@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style.css' %}" rel="stylesheet" />
+    <title>Call Processing Optimisation</title>
+        <script>
+        document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('outer').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('outer').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+    <style>
+        #outer
+        {
+
+        width:100%;
+        min-height:1200px;
+        height:auto;
+        //border:1px solid;
+        }
+        #p1
+        {
+        width:1200px;
+        min-height:885px;
+        height:auto;
+        margin-left:auto;
+        margin-right:auto;
+        //border:1px solid;
+        }
+        .a1
+        {
+        height:300px;
+        width:100%;
+        background-image:url('{% static "images/capture.png" %}');
+        background-size:100%;
+        background-repeat:no-repeat;
+        margin-top:-50px;
+        }
+        h1,h2
+        {
+        color:#2c262d;
+        }
+
+        #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://media.giphy.com/media/xFmuT64Jto3mRO4w3G/giphy.gif") no-repeat center center rgba(0,0,0,0.25)
+}
+    </style>
+</head>
+<div id="load"></div>
+<body onload="moveslider();" >
+<div id="outer">
+    <div id="p1">
+        <div class="s1">
+            <a href="{% url 'index' %}"><div class="s3" style="background-image:url('{% static "images/logo.png" %}');background-size:100%;background-repeat:no-repeat;"></div></a>
+            <div class="s4">
+                <h2><span style="color:white;">C</span>all Processing <span style="color:white;">O</span>ptimisation</h2>
+                <h4 style="color:#5b7a9a; margin-left:20px;margin-top:-15px;font-size:15px;letter-spacing:2px;text-shadow:1px 1px 1px;">CUSTOMER SUPPORT</h4>
+            </div>
+            <div class="s5">
+            <a href="{% url 'login' %}"><input type="button" class="button1" value="Login"/></a>
+            </div>
+            <div class="s5">
+                <a href="{% url 'registration' %}"><input type="button" class="button1" value="Register"/></a>
+            </div>
+        </div>
+        <hr style="background-color:black;"/>
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a href="{% url 'index' %}">HOME</a></li>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'about' %}">ABOUT US</a></li>
+		    <li><a href="{% url 'registration' %}">REGISTRATION</a></li>
+		    <li><a href="{% url 'login' %}">LOGIN</a></li>
+		    <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+
+    <div class="s6" style="word-spacing:4px;width:90%;margin-top:-10px;font-size:17px;font-family:calibri;letter-spacing:0px;color:grey;background-color:white;margin-top:15px;box-shadow:10px 10px 25px black;padding:60px;border-radius:10px;">
+        <div class="a1"></div><br/>
+        <h1>About CPO</h1>
+At CPO, we turn ideas into innovative networking products that connect people, power businesses, and advance the way we live. Easy to use. Powerful. Smart. And designed just for you.<br/>
+
+        <h2>For Home</h2>
+CPO makes it easy for you to have the smartest home in the neighborhood, with the latest, fastest networking technology. Our range of easy-to-use products can help you stream movie night more often, watch almost anything on your tablet without buffering, check in on your home from your smartphone and store and protect all of your family’s memories. From the most advanced wireless internet connectivity, to superior streaming and storage solutions, your home networking system will have the speed, range and performance you need, every time you need it. At CPO, we focus on all things connected, with the goal of making your online experience seamless so you can sit back, relax and do more.<br/>
+
+        <h2>For Business</h2>
+In business, confidence is everything. When it comes to your network, it’s even more important. Whether you’re a small business with big dreams or a mid-size business ready to take the next step, you need to share access and ideas safely, connect remote locations securely and give your people the tools to perform. At CPO, we provide networking, storage and security solutions without the cost and complexity of big IT. Our advanced range of reliable, affordable networking products are easy to install and maintain. We deliver solutions you can count on, so you can spend more time on what matters most – growing your business.<br/>
+
+        <h2>For Service Providers</h2>
+Keeping your customers happy and loyal is everything. At CPO we are dedicated to your success. That’s why we deliver the tools and solutions you need to keep your residential and business customers connected, productive and satisfied. Partner with CPO for home connectivity, home media, security and automation, and mobile solutions. We pay attention to the details that matter to you to deliver custom, cost-effective and scalable solutions that contribute to your bottom line.
+
+    </div>
+    </div>
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</body>
+</html>

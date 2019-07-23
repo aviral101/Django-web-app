@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style.css' %}" rel="stylesheet" />
+    <title>Call Processing Optimisation</title>
+    <script>
+        var images=["slider1.jpg","slider2.jpg","slider3.jpg"];
+        var i=0;
+        baseUrl="{% static 'images/' %}";
+        function moveslider()
+        {
+            if(i==images.length)
+            {
+            i=0;
+            }
+            document.getElementById("slide").src=baseUrl+images[i];
+            i++;
+            window.setTimeout("moveslider()",4000);
+        }
+        document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('outer').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('outer').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+    <style>
+        #load
+        {
+        width:100%;
+        height:100%;
+        position:fixed;
+        z-index:9999;
+        background:url("https://media.giphy.com/media/xFmuT64Jto3mRO4w3G/giphy.gif") no-repeat center center rgba(0,0,0,0.25)
+        }
+        hr
+        {
+        width:90%;
+        background-color:black;
+        border:1px solid;
+        }
+
+        body
+        {
+    margin: 0;
+    padding: 0;
+    //display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .box{
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  .card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  .card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+   text-transform: uppercase;
+  }
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   }
+    </style>
+</head>
+<body onload="moveslider();">
+<div id="load"></div>
+<div id="outer">
+    <div id="p1">
+        <div class="s1">
+            <a href="{% url 'index' %}"><div class="s3" style="background-image:url('{% static "images/logo.png" %}');background-size:100%;background-repeat:no-repeat;"></div></a>
+            <div class="s4">
+                <h2><span style="color:white;">C</span>all Processing <span style="color:white;">O</span>ptimisation</h2>
+                <h4 style="color:#5b7a9a; margin-left:20px;margin-top:-15px;font-size:15px;letter-spacing:2px;text-shadow:1px 1px 1px;">CUSTOMER SUPPORT</h4>
+            </div>
+            <div class="s5">
+            <a href="{% url 'login' %}"><input type="button" class="button1" value="Login"/></a>
+            </div>
+            <div class="s5">
+                <a href="{% url 'registration' %}"><input type="button" class="button1" value="Register"/></a>
+            </div>
+        </div>
+        <hr style="width:100%;border:0.7px solid;"/>
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'index' %}">HOME</a></li>
+		    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+		    <li><a href="{% url 'registration' %}">REGISTRATION</a></li>
+		    <li><a href="{% url 'login' %}">LOGIN</a></li>
+		    <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+    <!--Slider starts here-->
+    <div class="slider">
+        <img id="slide" width="1200px" height="450px" style="border-radius:15px;box-shadow:15px 15px 15px black;"/>
+    </div>
+    <!--Slider ends here-->
+    <div class="s6" style="min-height:800px;"><br/>
+        <div class="s7">
+            <div class="notification1"><br/>
+                <p style="font-size:20px;font-weight:900;color:white;margin-top:-9px;">NOTIFICATIONS</p>
+            </div>
+            <hr/>
+            <center>
+                <div class="notification2">
+            <marquee direction="up" height="690" onmouseover="stop()" onmouseout="start()">
+            {% for n in nf %}
+                <div class="notification3">
+            <span style="text-align:center;">
+                <p style="color:white;font-size:20px;">{{ n.notificationtext }}</p>
+                <p style="color:lightgrey;font-size:12px;margin-top:-14px;margin-left:-7px">{{ n.posteddate }}</p>
+            </span>
+                    </div>
+            {% endfor %}
+            </marquee>
+                    </div>
+                </center>
+        </div>
+        <div class="s8">
+            <h2 style="text-align:center;color:grey;margin-top:-20px;">SOME NETWORKING PRODUCTS</h2><br/>
+              <div class="box">
+      <div class="card">
+        <div class="imgBx">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/517px3saVRL._SX425_.jpg">
+        </div>
+        <div class="details">
+            <h2>ASUS Router<br><span>Rapture GTAC5300</span></h2>
+        </div>
+      </div>
+
+       <div class="card">
+         <div class="imgBx">
+            <img src="https://www.gamedude.com.au/images/com_hikashop/upload/841N-1280_2).jpg">
+         </div>
+         <div class="details">
+            <h2>TP-Link Router<br><span>TL-WR841N</span></h2>
+          </div>
+       </div>
+
+  </div><br/><br/>
+            <div class="box">
+      <div class="card">
+        <div class="imgBx">
+            <img src="https://static.bhphoto.com/images/images500x500/cisco_sg110_16_na_sg110_16_110_series_unmanaged_1450349494_1204487.jpg">
+        </div>
+        <div class="details">
+            <h2>Cisco Netwok Switch<br><span>SG110-16 110 Series</span></h2>
+        </div>
+      </div>
+
+  </div>
+        {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %} style="list-style-type:none;">
+                        <script>
+                            var a = "{{ message }}";
+                            alert(a);
+                        </script>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+        </div>
+    </div>
+    </div>
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</body>
+</html>

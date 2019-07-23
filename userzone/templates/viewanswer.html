@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style2.css' %}" rel="stylesheet" />
+    <title>Discussion Forum</title>
+    <style>
+        body
+        {
+        //background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+        background-image:url({% static 'images/bg2.jpg' %});
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        }
+
+        #menu
+        {
+        margin-top:30px;
+        height:50px;
+        width:100%;
+        //background-color:black;
+        //border:1px solid;
+        //border-radius:8px;
+        }
+        #menu ul
+        {
+        list-style-type:none;
+        }
+        #menu ul li
+        {
+        display:inline;
+        padding:15px;
+        //color:white;
+        //border:1px solid;
+        }
+        #menu ul li a
+        {
+        color:#525160;
+        font-family:calibri;
+        letter-spacing:2px;
+        font-size:15px;
+        text-decoration:none;
+        }
+        #menu ul li a:hover
+        {
+        color:#ec1c24;
+        }
+        #a1
+        {
+        height:40px;
+        width:140px;
+        border:1px solid grey;
+        margin-top:55px;
+        border-radius:100px;
+        background-color:;
+        }
+        #a2
+        {
+        height:35px;
+        width:35px;
+        border-radius:50px;
+        border:1px solid;
+        margin-top:2px;
+        margin-left:2px;
+        float:left;
+        background-color:lightgrey;
+        }
+        #a3
+        {
+        height:35px;
+        width:95px;
+        //border:1px solid;
+        float:left;
+        margin-top:2px;
+        }
+
+        table
+        {
+        border-collapse:seperate;
+        border-spacing:0 6px;
+        }
+        th
+        {
+        background-color:#212121;
+        color:white;
+        padding:12px;
+        }
+        td:first-child
+        {
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        }
+        td:last-child
+        {
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        }
+        .t1
+        {
+        background-color:rgba(236,236,236);
+        padding:10px;
+        }
+        #t2
+        {
+        font-size:18px;
+        font-family:calibri;
+        font-weight:900;
+        text-decoration:none;
+        color:black;
+        }
+        #t2:hover
+        {
+        text-decoration:underline;
+        }
+        .r1
+        {
+        margin:10px auto;
+        min-height:150px;
+        width:1200px;
+        padding-bottom:4px;
+        //border:1px solid;
+        overflow:hidden;
+        }
+        .r4
+        {
+        margin:10px auto;
+        min-height:150px;
+        width:1180px;
+        //border:1px solid;
+        padding:10px;
+        word-wrap:break-word;
+        height:auto;
+        border-radius:10px;
+        font-size:20px;
+        font-weight:900;
+        }
+        .r2
+        {
+        width:82%;
+        min-height:132px;
+        float:right;
+        //border:1px solid;
+        padding:8px;
+        word-wrap:break-word;
+        border-radius:0 20px 0 20px;
+        background-color:rgba(255,255,255,0.9);
+        }
+        .r3
+        {
+        height:140px;
+        width:15%;
+        padding:4px;
+        float:left;
+        text-align:center;
+        //border:1px solid;
+        border-radius:0 20px 0 20px;
+        background-color:rgba(189,189,189);
+        color:black;
+        }
+        hr
+        {
+          height: 3px;
+          color: black;
+          background-color: black;
+          border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="b1">
+<div id="outer">
+    <div id="p1">
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a href="{% url 'userzone:userhome' %}">HOME</a></li>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'userzone:discussion' %}">DISCUSS</a></li>
+		    <!--<li><a href="{% url 'userzone:searchsolution' %}">SEARCH SOLUTION</a></li>-->
+		    <li><a href="{% url 'userzone:complainlog' %}">COMPLAIN LOG</a></li>
+		    <li><a href="{% url 'userzone:changepassword' %}">CHANGE PASSWORD</a></li>
+		    <li><a href="{% url 'userzone:logout' %}">LOGOUT</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+        <hr/>
+    <div class="s6">
+        <div>
+        <a href="{% url 'userzone:discussion' %}"><button type="button" class="button4" style="background-color:#212121;float:left;">All Questions</button></a><br/><br/>
+        </div>
+        <div class="r4" style="background-color:white;">Q: {{ quest.questiontext }}</div>
+        <a href="{% url 'userzone:answer' quest.qid %}"><button type="button" class="button4" style="background-color:#212121;float:right;">Reply</button></a>
+        <br/><br/>
+            {% for a in ans %}
+            <div class="r1">
+                <div class="r2">{{ a.answertext }}</div>
+                <div class="r3">
+                <h3 style="margin-top:40px;">{{ a.answeredby }}</h3>
+                <h5 style="margin-top:-9px;">{{ a.answereddate }}</h5>
+                </div>
+            </div>
+            <hr/>
+            {% endfor %}
+    </div>
+    </div>
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

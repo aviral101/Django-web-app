@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style2.css' %}" rel="stylesheet" />
+    <title>Administrator</title>
+    <style>
+        body
+        {
+        background-color:#74d2e7;
+        //background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+        //background-image:url({% static 'images/bg2.jpg' %});
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        }
+
+        #menu
+        {
+        margin-top:30px;
+        height:50px;
+        width:100%;
+        //background-color:black;
+        //border:1px solid;
+        //border-radius:8px;
+        }
+        #menu ul
+        {
+        list-style-type:none;
+        }
+        #menu ul li
+        {
+        display:inline;
+        padding:15px;
+        //color:white;
+        //border:1px solid;
+        }
+        #menu ul li a
+        {
+        color:#525160;
+        font-family:calibri;
+        letter-spacing:2px;
+        font-size:15px;
+        text-decoration:none;
+        }
+        #menu ul li a:hover
+        {
+        color:#ec1c24;
+        }
+        #a1
+        {
+        height:40px;
+        width:140px;
+        border:1px solid grey;
+        margin-top:55px;
+        border-radius:100px;
+        background-color:;
+        }
+        #a2
+        {
+        height:35px;
+        width:35px;
+        border-radius:50px;
+        border:1px solid;
+        margin-top:2px;
+        margin-left:2px;
+        float:left;
+        background-color:lightgrey;
+        }
+        #a3
+        {
+        height:35px;
+        width:95px;
+        //border:1px solid;
+        float:left;
+        margin-top:2px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="b1">
+<div id="outer">
+    <div id="p1">
+        <div class="s1">
+            <a href="{% url 'adminzone:adminhome' %}"><div class="s3" style="background-image:url('{% static "images/logo.png" %}');background-size:100%;background-repeat:no-repeat;"></div></a>
+            <div class="s4">
+                <h2><span style="color:white;">C</span>all Processing <span style="color:white;">O</span>ptimisation</h2>
+                <h4 style="color:#5b7a9a; margin-left:20px;margin-top:-15px;font-size:15px;letter-spacing:2px;text-shadow:1px 1px 1px;">CUSTOMER SUPPORT</h4>
+            </div>
+            <div class="s5" style="border:none;">
+                {% if name %}
+                <h4 style="margin-top:80px;margin-left:140px;text-transform:uppercase;color:#31302c;font-family:calibri;letterspacing:1px;font-size:20px;">{{ name }}</h4>
+                {% endif %}
+
+            </div>
+
+        </div>
+        <hr style="background-color:black;"/>
+    <!--Navigation Bar-->
+    <div id="menu">
+	    <ul>
+		    <li><a href="{% url 'adminzone:adminhome' %}">ADMIN HOME</a></li>
+		    <li><a href="{% url 'adminzone:enquiries' %}">ENQUIRIES</a></li>
+		    <li><a href="{% url 'adminzone:complains' %}">COMPLAINS</a></li>
+		    <li><a href="{% url 'adminzone:customerinfo' %}">CUSTOMER INFO</a></li>
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'adminzone:knowledgebase' %}">KNOWLEDGE BASE</a></li>
+		    <li><a href="{% url 'adminzone:logout' %}">LOGOUT</a></li>
+		</ul>
+	</div>
+    <!--Navigation bar ends-->
+    <div class="s6">
+        <form method="post" action="{% url 'adminzone:saveknowledgebase' %}">
+            {% csrf_token %}
+            <h2 style="text-align:center;">
+                Knowledgebase Management
+            </h2>
+            <table border="0" style="margin:0 auto;width:70%;border-collapse:seperate;border-spacing:0 15px;">
+                <tr>
+                    <td align="right">Enter Problem Id :</td>
+                    <td>
+                        <input type="text" class="box1" name="problemid" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Problem Text :</td>
+                    <td>
+                        <textarea class="box2" name="problemtext" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Solution Text :</td>
+                    <td>
+                        <textarea name="solutiontext" class="box2" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp</td>
+                    <td>
+                        <input type="submit" value="Save" class="button2"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </div>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %} style="list-style-type:none">
+            <script>
+                var a="{{ message }}";
+                alert(a);
+            </script>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

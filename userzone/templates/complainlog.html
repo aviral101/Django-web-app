@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
+    <link href="{% static 'css\style2.css' %}" rel="stylesheet" />
+    <title>Complain Log</title>
+    <style>
+        body
+        {
+        background-color:lightgreen;
+        background-image:url({% static 'images/bg2.jpg' %});
+        //background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        }
+        #menu1
+        {
+        height:85px;
+        width:100%;
+        //border:1px solid;
+        }
+        #menu2
+        {
+        height:85px;
+        width:80px;
+        //border:1px solid;
+        float:left;
+        }
+        #menu
+        {
+        margin-top:15px;
+        height:50px;
+        width:899px;
+        //background-color:black;
+        //border:1px solid;
+        //border-radius:8px;
+        float:left;
+        }
+        #menu ul
+        {
+        list-style-type:none;
+        }
+        #menu ul li
+        {
+        display:inline;
+        padding:15px;
+        //color:white;
+        //border:1px solid;
+        }
+        #menu ul li a
+        {
+        color:#212121;
+        font-family:calibri;
+        letter-spacing:2px;
+        font-size:15px;
+        text-decoration:none;
+        }
+        #menu ul li a:hover
+        {
+        color:#ec1c24;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div id="p1" style="min-height:600px;">
+    <!--Navigation Bar-->
+    <div id="menu1">
+        <div id="menu2">
+            <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-top:-8px;"/>
+        </div>
+        <div id="menu">
+	    <ul>
+		    <li><a href="{% url 'userzone:userhome' %}">HOME</a></li>
+		    <li><a href="{% url 'userzone:discussion' %}">DISCUSS</a></li>
+		    <!--<li><a href="{% url 'userzone:searchsolution' %}">SEARCH SOLUTION</a></li>-->
+		    <li><a style="font-weight:900;color:#ec1c24;" href="{% url 'userzone:complainlog' %}">COMPLAIN LOG</a></li>
+		    <li><a href="{% url 'userzone:changepassword' %}">CHANGE PASSWORD</a></li>
+		    <li><a href="{% url 'userzone:logout' %}">LOGOUT</a></li>
+		</ul>
+    </div>
+	</div>
+        <hr style="background-color:black;"/>
+    <!--Navigation bar ends-->
+    <div class="s6">
+        <form action="{% url 'userzone:savecomplain' %}" method="post">
+            {% csrf_token %}
+            <h2 style="margin-left:370px;margin-top:40px;font-family:serif;">Complain Lodging System</h2>
+            <table border="0" style="width:80%;margin:0 auto;" cellpadding="20px">
+                <tr>
+                    <td align="right">Subject :</td>
+                    <td>
+                        <input type="text" class="box1" style="background-color:transparent;" name="subject" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Complain :</td>
+                    <td>
+                        <textarea name="complaintext" class="box2" style="background-color:transparent;" required style="height:150px;resize:none;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp</td>
+                    <td>
+                        <input type="submit" value="Submit" class="button2"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    </div>
+<div class="s9">
+    <div class="s11"></div>
+    <div class="s10">
+        <h1 style="color:white;">About Us</h1>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="s10">
+        <img src="{% static 'images/logo.png' %}" height="100px" width="100px" style="margin-left:140px;margin-top:60px;"/>
+        <h3 style="color:white;margin-left:80px;font-family:calibri;">Copyright &copy 2019 CPO.All Rights Reserved</h3>
+    </div>
+    <div class="s10">
+        <h3 style="color:white;margin-left:80px;font-family:calibri;margin-top:130px;">Developed By:- <span style="margin-left:18px;">Aviral Singh</span><br/>
+            <span style="margin-left:140px;">CSE Ist year</span><br/><span style="margin-left:140px;">KNIT, Sultanpur</span></h3>
+    </div>
+</div>
+</div>
+</body>
+</html>
