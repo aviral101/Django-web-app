@@ -175,7 +175,7 @@
             </tr><br/>
             {% for q in quest %}
             <tr>
-                <td class="t1" style="max-width:720px;word-wrap:break-word;">►<a id="t2" href="{% url 'userzone:answer' q.qid %}">{{ q.questiontext }}</a></td>
+                <td class="t1" style="max-width:720px;word-wrap:break-word;">►<a id="t2" href="{% url 'userzone:viewanswer' q.qid %}">{{ q.questiontext }}</a></td>
                 <td class="t1" align="center">{{ q.askedby }}</td>
                 <td class="t1" align="center">{{ q.posteddate }}</td>
                 <td class="t1" align="center"><a href="{% url 'userzone:answer' q.qid %}"><button class="button2">Reply</button></a></td>
@@ -205,4 +205,4 @@
 </div>
 </div>
 </body>
-</html>
+</h
