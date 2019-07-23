@@ -138,7 +138,8 @@ def postanswer(request):
             a=Answer(answertext=answertext,answeredby=answeredby,qid=qid,answereddate=answereddate)
             a.save()
             ans=Answer.objects.filter(qid=qid)
-            return render(request,'viewanswer.html',{'ans':ans})
+            quest=Question.objects.get(qid=qid)
+            return render(request,'viewanswer.html',{'ans':ans,'quest':quest})
         else:
             return render(request,'login.html')
     except KeyError:
