@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86687642-8f77-4b78-acee-ed277940b8af" name="Default Changelist" comment="" />
+    <list default="true" id="86687642-8f77-4b78-acee-ed277940b8af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cpo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cpo/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +39,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+            <state relative-caret-position="287">
+              <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+              <folding>
+                <element signature="e#304#313#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,6 +57,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -94,15 +102,15 @@
         <option value="$PROJECT_DIR$/userzone/templates/changepassword.html" />
         <option value="$PROJECT_DIR$/userzone/templates/complainlog.html" />
         <option value="$PROJECT_DIR$/userzone/templates/userhome.html" />
-        <option value="$PROJECT_DIR$/cpo/settings.py" />
         <option value="$PROJECT_DIR$/cpo/wsgi.py" />
+        <option value="$PROJECT_DIR$/cpo/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="135" />
-    <option name="y" value="20" />
-    <option name="width" value="1750" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="995" />
+    <option name="y" value="42" />
+    <option name="width" value="1072" />
     <option name="height" value="980" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -179,10 +187,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="796" y="34" width="857" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.22457068" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" weight="0.24926686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5021097" side_tool="true" weight="0.24966975" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -193,7 +201,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22772278" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24655436" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -670,8 +678,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+        <state relative-caret-position="287">
+          <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+          <folding>
+            <element signature="e#304#313#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
