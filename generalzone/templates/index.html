@@ -190,7 +190,7 @@
             <center>
                 <div class="notification2">
             <marquee direction="up" height="690" onmouseover="stop()" onmouseout="start()">
-            {% for n in nf %}
+            {% for n in nf reversed %}
                 <div class="notification3">
             <span style="text-align:center;">
                 <p style="color:white;font-size:20px;">{{ n.notificationtext }}</p>

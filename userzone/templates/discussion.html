@@ -173,7 +173,7 @@
                 <th width="10%">&nbsp</th>
                 <th>View Answer</th>
             </tr><br/>
-            {% for q in quest %}
+            {% for q in quest reversed %}
             <tr>
                 <td class="t1" style="max-width:720px;word-wrap:break-word;">►<a id="t2" href="{% url 'userzone:viewanswer' q.qid %}">{{ q.questiontext }}</a></td>
                 <td class="t1" align="center">{{ q.askedby }}</td>

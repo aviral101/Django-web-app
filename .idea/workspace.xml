@@ -4,7 +4,9 @@
     <list default="true" id="86687642-8f77-4b78-acee-ed277940b8af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generalzone/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userzone/templates/discussion.html" beforeDir="false" afterPath="$PROJECT_DIR$/userzone/templates/discussion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userzone/templates/userhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/userzone/templates/userhome.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,26 +20,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/userzone/templates/discussion.html">
+        <entry file="file://$PROJECT_DIR$/generalzone/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="177" column="116" selection-start-line="177" selection-start-column="116" selection-end-line="177" selection-end-column="116" />
+            <state relative-caret-position="188">
+              <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#0;n#table#0;n#form#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#h3#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,7 +69,6 @@
         <option value="$PROJECT_DIR$/adminzone/templates/adminhome.html" />
         <option value="$PROJECT_DIR$/adminzone/templates/complains.html" />
         <option value="$PROJECT_DIR$/generalzone/templates/registration.html" />
-        <option value="$PROJECT_DIR$/generalzone/templates/login.html" />
         <option value="$PROJECT_DIR$/adminzone/urls.py" />
         <option value="$PROJECT_DIR$/adminzone/templates/knowledgebase.html" />
         <option value="$PROJECT_DIR$/adminzone/views.py" />
@@ -93,19 +82,20 @@
         <option value="$PROJECT_DIR$/userzone/templates/answer.html" />
         <option value="$PROJECT_DIR$/userzone/templates/changepassword.html" />
         <option value="$PROJECT_DIR$/userzone/templates/complainlog.html" />
-        <option value="$PROJECT_DIR$/generalzone/templates/index.html" />
         <option value="$PROJECT_DIR$/userzone/templates/viewanswer.html" />
         <option value="$PROJECT_DIR$/userzone/views.py" />
-        <option value="$PROJECT_DIR$/userzone/templates/userhome.html" />
         <option value="$PROJECT_DIR$/cpo/settings.py" />
+        <option value="$PROJECT_DIR$/generalzone/templates/login.html" />
+        <option value="$PROJECT_DIR$/userzone/templates/userhome.html" />
         <option value="$PROJECT_DIR$/userzone/templates/discussion.html" />
+        <option value="$PROJECT_DIR$/generalzone/templates/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="517" />
+    <option name="x" value="515" />
     <option name="y" value="110" />
-    <option name="width" value="1073" />
+    <option name="width" value="1075" />
     <option name="height" value="980" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -124,18 +114,18 @@
             <path>
               <item name="cpo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpo" type="462c0819:PsiDirectoryNode" />
-              <item name="cpo" type="462c0819:PsiDirectoryNode" />
+              <item name="generalzone" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cpo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpo" type="462c0819:PsiDirectoryNode" />
-              <item name="userzone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cpo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpo" type="462c0819:PsiDirectoryNode" />
-              <item name="userzone" type="462c0819:PsiDirectoryNode" />
+              <item name="generalzone" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cpo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cpo" type="462c0819:PsiDirectoryNode" />
+              <item name="userzone" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,7 +186,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.24900925" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.24900925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5021097" side_tool="true" weight="0.24966975" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -207,7 +197,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22772278" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22772278" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -465,17 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalzone/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="68" column="92" selection-start-line="68" selection-start-column="92" selection-end-line="68" selection-end-column="92" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generalzone/templates/enquiry.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -545,17 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4180">
           <caret line="190" column="13" lean-forward="true" selection-start-line="190" selection-start-column="13" selection-end-line="190" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generalzone/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4103">
-          <caret line="205" column="65" selection-start-line="205" selection-start-column="65" selection-end-line="205" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,10 +604,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cpo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="86" selection-start-line="86" selection-end-line="89" selection-end-column="40" />
+          <folding>
+            <element signature="e#304#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/userzone/templates/userhome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6622">
-          <caret line="301" column="102" selection-start-line="301" selection-start-column="102" selection-end-line="301" selection-end-column="102" />
+        <state relative-caret-position="210">
+          <caret line="296" column="25" lean-forward="true" selection-start-line="296" selection-start-column="25" selection-end-line="296" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -655,20 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="86" selection-start-line="86" selection-end-line="89" selection-end-column="40" />
-          <folding>
-            <element signature="e#304#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userzone/templates/discussion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="177" column="116" selection-start-line="177" selection-start-column="116" selection-end-line="177" selection-end-column="116" />
+        <state relative-caret-position="451">
+          <caret line="175" column="38" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -685,6 +653,29 @@
             <element signature="n#style#0;n#h3#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#h3#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalzone/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalzone/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

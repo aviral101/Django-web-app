@@ -294,7 +294,7 @@ a:hover {
             <center>
                 <div class="notification2">
             <marquee direction="up" height="690" onmouseover="stop()" onmouseout="start()">
-            {% for n in q %}
+            {% for n in q reversed %}
                 <div class="notification3">
                     <a href="{% url 'userzone:viewanswer' n.qid %}" style="text-decoration:none;">
             <span style="text-align:center;">
