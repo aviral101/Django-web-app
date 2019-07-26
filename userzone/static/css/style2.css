@@ -53,6 +53,15 @@ width:1200px;
 min-height:700px;
 border:1px solid transparent;
 }
+.s6#d1
+{
+width:1200px;
+min-height:700px;
+border:1px solid transparent;
+position:relative;
+top:0;
+left:0;
+}
 .button1
 {
 height:35px;
