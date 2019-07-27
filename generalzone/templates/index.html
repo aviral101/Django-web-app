@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" width="device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Call Processing Optimisation(CPO) project based on django framework.Developed By:-Aviral Singh, CSE 2nd year, KNIT Sultanpur.">
+    <meta name="keywords" content="Call Processing Optimisation,Softpro India,Softpro,CPO,Django project,django,python project,python,project,KNIT Sultanpur,KNIT,Sultanpur,Aviral Singh,Aviral">
+    <meta name="author" content="Aviral Singh">
     {% load static %}
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/43fa865d35.js"></script>
@@ -10,6 +13,19 @@
     <link href="{% static 'css\style1.css' %}" rel="stylesheet" />
     <title>Call Processing Optimisation</title>
     <script>
+        var images=["slider1.jpg","slider2.jpg","slider3.jpg"];
+        var i=0;
+        baseUrl="{% static 'images/' %}";
+        function moveslider()
+        {
+            if(i==images.length)
+            {
+            i=0;
+            }
+            document.getElementById("slide").src=baseUrl+images[i];
+            i++;
+            window.setTimeout("moveslider()",4000);
+        }
         function nav()
         {
         var x = document.getElementById("nav-one");
@@ -26,26 +42,85 @@
         document.getElementById("nav-one").style.display="none";
         }
         }
-
     </script>
 </head>
-<body>
+<body onload="moveslider()">
 <header>
-    <button type="button" onclick="nav()"><i class="fas fa-bars fa-4x" id="bar"></i></button>
-    <img src="{% static 'images/logo.png' %}"/>
-    <p>Call Processing</p>
-    <p>Optimisation</p>
-    <a href="{% url 'login' %}" style="text-decoration:none;"><button class="btn btn-one">SIGN IN</button></a>
-    <a href="{% url 'registration' %}" style="text-decoration:none;"><button class="btn btn-one">REGISTER</button></a>
+        <!--Navigation bar starts-->
     <nav id="nav-one">
         <ul>
-            <li><a href="{% url 'index' %}">HOME</a></li>
-            <li><a href="{% url 'about' %}">ABOUT US</a></li>
-            <li><a href="{% url 'registration' %}">REGISTRATION</a></li>
-            <li><a href="{% url 'login' %}">LOGIN</a></li>
-            <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+            <a href="{% url 'index' %}" style="text-decoration:none;"><li style="background:white;color:black;">HOME</li></a>
+            <a href="{% url 'about' %}" style="text-decoration:none;"><li>ABOUT US</li></a>
+            <a href="{% url 'registration' %}" style="text-decoration:none;"><li>REGISTRATION</li></a>
+            <a href="{% url 'login' %}" style="text-decoration:none;"><li>LOGIN</li></a>
+            <a href="{% url 'enquiry' %}" style="text-decoration:none;"><li>ENQUIRY</li></a>
         </ul>
     </nav>
+    <hr class="hr-one"/>
+    <!--Navigation bar ends-->
+    <button class="btn-two" type="button" onclick="nav()" style="border:none;"><i class="fas fa-bars fa-2x" id="bar"></i></button>
+    <img src="{% static 'images/logo.png' %}"/>
+    <p>Call Processing
+    Optimisation</p>
+    <a href="{% url 'login' %}" style="text-decoration:none;"><button class="btn btn-one">Login</button></a>
+    <a href="{% url 'registration' %}" style="text-decoration:none;"><button class="btn btn-one">Register</button></a>
 </header>
+<div class="slider">
+        <img id="slide" width="1200px" height="450px" style="margin:0 auto 0 auto;border-radius:15px;box-shadow:15px 15px 15px black;"/>
+    </div>
+<main>
+    <aside>
+        <h1>NOTIFICATIONS</h1>
+        <marquee direction="up" onmouseover="stop()" onmouseout="start()">
+            {% for n in nf reversed %}
+            <div class="notification">
+            <p class="p-one">{{ n.notificationtext }}</p>
+            <p style="font-size:65%;color:lightgrey;padding:5px;">{{ n.posteddate }}</p>
+            </div>
+            {% endfor %}
+        </marquee>
+    </aside>
+    <article>
+        <h1>NETWORKING PRODUCTS</h1>
+        <figure class="fig-one">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/517px3saVRL._SX425_.jpg" alt="ASUS Router"/>
+            <figcaption>
+                <h2>ASUS Router<br><span>Rapture GTAC5300</span></h2>
+            </figcaption>
+        </figure>
+        <figure class="fig-two">
+            <img src="https://www.gamedude.com.au/images/com_hikashop/upload/841N-1280_2).jpg" alt="TP-LINK Router"/>
+            <figcaption>
+                <h2>TP-LINK Router<br><span>TL-WR841N</span></h2>
+            </figcaption>
+        </figure>
+        <figure class="fig-three">
+            <img src="https://static.bhphoto.com/images/images500x500/cisco_sg110_16_na_sg110_16_110_series_unmanaged_1450349494_1204487.jpg" alt="CISCO Network Switch"/>
+            <figcaption>
+                <h2>CISCO Network Switch<br><span>SG110-16 110 Series</span></h2>
+            </figcaption>
+        </figure>
+
+    </article>
+</main>
+<footer>
+    <div class="a-one">
+        <h1>About Us</h1><br>
+        <p style="font-family:calibri;color:#808080;letter-spacing:1px;font-weight:900;font-size:17px;">Hey there! Are you
+            stuck with our product.No need to worry, we are here to help you 24x7.  Here at CPO, we all work to ensure that all
+        our systems in the hands of our customers work flawlessly.  This website is used to answer important queries about
+        our products and provide solution to the user in case he gets stuck somewhere.</p>
+    </div>
+    <div class="a-two">
+        <img src="{% static 'images/logo.png' %}" alt="logo"/>
+        <h5>Copyright&copy 2019 CPO. All Rights Reserved</h5>
+    </div>
+    <div class="a-three">
+        <h5>Developed By :-</h5><br>
+        <h5>Aviral Singh</h5>
+        <h5>CSE, 2nd year</h5>
+        <h5>KNIT, Sultanpur</h5>
+    </div>
+</footer>
 </body>
 </html>
