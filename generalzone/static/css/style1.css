@@ -55,6 +55,7 @@ display:none;
 {
 text-decoration:none;
 color:black;
+outline:none;
 padding:10px 30px;
 margin:50px auto;
 display:block;
@@ -144,18 +145,19 @@ width:70%;
 height:auto;
 padding:10px 30px;
 word-wrap:break-word;
-background:#212121 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+background-image:linear-gradient(45deg,black,silver,black);
+background-size:400%;
 border-radius:5px;
 margin:20px auto;
 text-align:center;
 box-shadow:7px 7px 7px black;
 color:white;
-animation:shine 2s infinite;
+animation:shine 10s infinite alternate;
 }
 @keyframes shine
 {
-0%{background:#212121 linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.05));}
-100%{background:#212121 linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.6));}
+0%{background-size:400%}
+100%{background-size:100%;}
 }
 .notification p
 {
@@ -431,6 +433,7 @@ box-shadow:15px 15px 15px black;
 }
 main
 {
+overflow:hidden;
 width:1200px;
 min-height:700px;
 height:auto;
@@ -463,6 +466,7 @@ width:70%;
 }
 figure
 {
+position:relative;
 margin-top:130px;
 height:330px;
 width:230px;
