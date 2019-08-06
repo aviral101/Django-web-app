@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86687642-8f77-4b78-acee-ed277940b8af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generalzone/static/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/static/css/style1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generalzone/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generalzone/templates/enquiry.html" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/templates/enquiry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generalzone/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generalzone/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generalzone/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/generalzone/templates/registration.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
