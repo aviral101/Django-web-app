@@ -6,19 +6,7 @@
     <link href="{% static 'images\logo.png' %}" rel="icon"/>   <!--fevicon icon-->
     <link href="{% static 'css\style.css' %}" rel="stylesheet" />
     <title>Call Processing Optimisation</title>
-        <script>
-        document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('outer').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('outer').style.visibility="visible";
-      },1000);
-  }
-}
+    <script>
     </script>
     <style>
         #outer
@@ -51,9 +39,10 @@
         {
         color:#2c262d;
         }
+
     </style>
 </head>
-<body onload="moveslider();" >
+<body>
 <div id="outer">
     <div id="p1">
         <div class="s1">
